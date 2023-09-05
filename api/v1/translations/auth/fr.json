@@ -1,0 +1,17 @@
+{
+    "BUG_TRACKER_EMAIL": "admin@bugtracker.software",
+    "EMAIL_VERIFICATION_SUBJECT": "vérification des e-mails bugtracker.software",
+    "EMAIL_FORGOT_PASSWORD_SUBJECT": "bugtracker.software réinitialisation du mot de passe",
+    "ERROR_INVALID_EMAIL": "Email invalide",
+    "ERROR_INVALID_PASSWORD": "Mot de passe incorrect",
+    "ERROR_INVALID_FIRSTNAME": "Prénom invalide",
+    "ERROR_INVALID_LASTNAME": "Nom de famille invalide",
+    "ERROR_INVALID_EMAIL_VERIFICATION_TOKEN": "Jeton de vérification d'e-mail non valide",
+    "ERROR_WRONG_PASSWORD": "Mauvais mot de passe.",
+    "ERROR_USER_NOT_FOUND": "Utilisateur non trouvé.",
+    "ERROR_CANT_SEND_PASSWORD_RESET_EMAIL": "Problème d'envoi d'e-mail de réinitialisation du mot de passe.",
+    "ERROR_SENDING_VERIFICATION_EMAIL": "Problème d'envoi de l'e-mail de vérification.",
+    "ERROR_UPDATING_THE_USER": "Problème de mise à jour de l'utilisateur.",
+    "ERROR_TOKEN_EXPIRED": "Le jeton a expiré ou n'a pas pu extraire l'utilisateur.",
+    "ERROR_GENERATING_TOKEN": "Erreur lors de la génération du jeton"
+}

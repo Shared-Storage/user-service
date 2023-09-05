@@ -1,0 +1,20 @@
+{
+    "BUG_TRACKER_EMAIL": "admin@bugtracker.software",
+    "EMAIL_VERIFICATION_SUBJECT": "bugtracker.software email verification",
+    "EMAIL_FORGOT_PASSWORD_SUBJECT": "bugtracker.software password reset",
+    "ERROR_INVALID_EMAIL": "Invalid email",
+    "ERROR_INVALID_PASSWORD": "Invalid password",
+    "ERROR_INVALID_CURRENT_PASSWORD": "Invalid current password",
+    "ERROR_INVALID_FIRSTNAME": "Invalid first name",
+    "ERROR_INVALID_LASTNAME": "Invalid last name",
+    "ERROR_INVALID_EMAIL_VERIFICATION_TOKEN": "Invalid email verification token",
+    "ERROR_WRONG_PASSWORD": "Wrong password.",
+    "ERROR_WRONG_CURRENT_PASSWORD": "Wrong current password.",
+    "ERROR_USER_NOT_FOUND": "User not found.",
+    "ERROR_EMAIL_NOT_REGISTERED": "Problem in sending password reset email, email not registered.",
+    "ERROR_CANT_SEND_PASSWORD_RESET_EMAIL": "Problem in sending password reset email.",
+    "ERROR_SENDING_VERIFICATION_EMAIL": "Problem in sending verification email.",
+    "ERROR_UPDATING_THE_USER": "Problem in updating the user.",
+    "ERROR_TOKEN_EXPIRED": "Token expired or wasn't able to extract user.",
+    "ERROR_GENERATING_TOKEN":"Error generating token"
+}

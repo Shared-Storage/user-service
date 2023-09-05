@@ -1,0 +1,14 @@
+{
+    "ERROR_UPDATE_BILLING_DETAILS": "बिलिंग विवरण अद्यतन नहीं किया जा सका.",
+    "ERROR_GET_PLANS": "योजनाएं नहीं मिल सकीं.",
+    "ERROR_GET_PRODUCT_FROM_ID": "आईडी से उत्पाद प्राप्त नहीं किया जा सका.",
+    "ERROR_CANCEL_SUBS_PERIOD_END": "अवधि समाप्ति पर सदस्यता रद्द नहीं की जा सकी.",
+    "CANCEL_SUBSCRIPTION_AT_PERIOD_END_METHOD": "अवधि के अंत में सदस्यता विधि हटाए गए मान को रद्द करें",
+    "ERROR_RESUMING_SUBSCRIPTION": "सदस्यता पुनः प्रारंभ करने में त्रुटि",
+    "ERROR_CANCEL_SUBS": "सदस्यता रद्द नहीं की जा सकी.",
+    "ERROR_UPDATE_SUBSCRIPTION": "सदस्यता अपडेट नहीं की जा सकी.",
+    "ERROR_SUBSCRIPTION_PAYMENT_METHOD": "सदस्यता भुगतान विधि नहीं कर सका.",
+    "ERROR_RETRIEVE_PAYMENT_METHOD": "भुगतान विधि पुनः प्राप्त नहीं की जा सकी",
+    "ERROR_GET_CUSTOMERS_INVOICE": "ग्राहक का चालान नहीं मिल सका",
+    "ERROR_CREATE_SETUP_INTENT": "सेटअप आशय नहीं बनाया जा सका"
+  }

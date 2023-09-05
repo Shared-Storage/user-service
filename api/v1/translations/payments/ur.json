@@ -1,0 +1,14 @@
+{
+    "ERROR_UPDATE_BILLING_DETAILS": "بلنگ کی تفصیلات کو اپ ڈیٹ نہیں کیا جا سکا۔",
+    "ERROR_GET_PLANS": "منصوبے حاصل نہیں کر سکے۔",
+    "ERROR_GET_PRODUCT_FROM_ID": "آئی ڈی سے پروڈکٹ حاصل نہیں ہو سکا۔",
+    "ERROR_CANCEL_SUBS_PERIOD_END": "مدت کے اختتام پر سبسکرپشن کو منسوخ نہیں کیا جا سکا۔",
+    "CANCEL_SUBSCRIPTION_AT_PERIOD_END_METHOD": "مدت کے اختتام پر منسوخ کریں سبسکرپشن طریقہ حذف شدہ قدر",
+    "ERROR_RESUMING_SUBSCRIPTION": "سبسکرپشن دوبارہ شروع کرنے میں خرابی۔",
+    "ERROR_CANCEL_SUBS": "سبسکرپشن کو منسوخ نہیں کیا جا سکا۔",
+    "ERROR_UPDATE_SUBSCRIPTION": "سبسکرپشن کو اپ ڈیٹ نہیں کیا جا سکا۔",
+    "ERROR_SUBSCRIPTION_PAYMENT_METHOD": "سبسکرپشن ادائیگی کا طریقہ نہیں ہو سکا۔",
+    "ERROR_RETRIEVE_PAYMENT_METHOD": "ادائیگی کا طریقہ بازیافت نہیں ہو سکا",
+    "ERROR_GET_CUSTOMERS_INVOICE": "کسٹمر کی رسید حاصل نہیں کی جا سکی",
+    "ERROR_CREATE_SETUP_INTENT": "سیٹ اپ کا ارادہ نہیں بنایا جا سکا"
+  }

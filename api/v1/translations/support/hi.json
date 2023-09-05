@@ -1,0 +1,17 @@
+{
+    "BUG_TRACKER_EMAIL": "admin@bugtracker.software",
+    "EMAIL_VERIFICATION_SUBJECT": "बगट्रैकर.सॉफ्टवेयर ईमेल सत्यापन",
+    "EMAIL_FORGOT_PASSWORD_SUBJECT": "बगट्रैकर.सॉफ्टवेयर पासवर्ड रीसेट",
+    "ERROR_INVALID_EMAIL": "अमान्य ईमेल",
+    "ERROR_INVALID_PASSWORD": "अवैध पासवर्ड",
+    "ERROR_INVALID_FIRSTNAME": "अमान्य पहला नाम",
+    "ERROR_INVALID_LASTNAME": "अमान्य अंतिम नाम",
+    "ERROR_INVALID_EMAIL_VERIFICATION_TOKEN": "अमान्य ईमेल सत्यापन टोकन",
+    "ERROR_WRONG_PASSWORD": "गलत पासवर्ड।",
+    "ERROR_USER_NOT_FOUND": "उपयोगकर्ता नहीं मिला।",
+    "ERROR_CANT_SEND_PASSWORD_RESET_EMAIL": "पासवर्ड रीसेट ईमेल भेजने में समस्या।",
+    "ERROR_SENDING_VERIFICATION_EMAIL": "सत्यापन ईमेल भेजने में समस्या।",
+    "ERROR_UPDATING_THE_USER": "उपयोगकर्ता को अपडेट करने में समस्या.",
+    "ERROR_TOKEN_EXPIRED": "टोकन की अवधि समाप्त हो गई या उपयोगकर्ता को निकालने में सक्षम नहीं था।",
+    "ERROR_GENERATING_TOKEN": "टोकन जनरेट करने में गड़बड़ी"
+}

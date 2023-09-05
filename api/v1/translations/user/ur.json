@@ -1,0 +1,17 @@
+{
+    "BUG_TRACKER_EMAIL": "admin@bugtracker.software",
+    "EMAIL_VERIFICATION_SUBJECT": "bugtracker.software ای میل کی توثیق",
+    "EMAIL_FORGOT_PASSWORD_SUBJECT": "bugtracker.software پاس ورڈ ری سیٹ",
+    "ERROR_INVALID_EMAIL": "غلط ای میل",
+    "ERROR_INVALID_PASSWORD": "غلط پاسورڈ",
+    "ERROR_INVALID_FIRSTNAME": "غلط پہلا نام",
+    "ERROR_INVALID_LASTNAME": "غلط آخری نام",
+    "ERROR_INVALID_EMAIL_VERIFICATION_TOKEN": "غلط ای میل تصدیقی ٹوکن",
+    "ERROR_WRONG_PASSWORD": "غلط پاس ورڈ.",
+    "ERROR_USER_NOT_FOUND": "صارف نہیں ملا.",
+    "ERROR_CANT_SEND_PASSWORD_RESET_EMAIL": "پاس ورڈ ری سیٹ ای میل بھیجنے میں دشواری۔",
+    "ERROR_SENDING_VERIFICATION_EMAIL": "تصدیقی ای میل بھیجنے میں دشواری۔",
+    "ERROR_UPDATING_THE_USER": "صارف کو اپ ڈیٹ کرنے میں دشواری۔",
+    "ERROR_TOKEN_EXPIRED": "ٹوکن کی میعاد ختم ہوگئی یا صارف کو نکالنے کے قابل نہیں تھا۔",
+    "ERROR_GENERATING_TOKEN": "ٹوکن بنانے میں خرابی۔"
+}

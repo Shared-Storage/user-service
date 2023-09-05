@@ -1,0 +1,14 @@
+{
+    "ERROR_UPDATE_BILLING_DETAILS": "Couldn't update billing details.",
+    "ERROR_GET_PLANS": "Couldn't get plans.",
+    "ERROR_GET_PRODUCT_FROM_ID": "Couldn't get product from id.",
+    "ERROR_CANCEL_SUBS_PERIOD_END": "Couldn't cancel subscription at period end.",
+    "CANCEL_SUBSCRIPTION_AT_PERIOD_END_METHOD": "Cancel at the end of the period subscription method deleted value",
+    "ERROR_RESUMING_SUBSCRIPTION": "Error in resuming the subscription",
+    "ERROR_CANCEL_SUBS": "Couldn't cancel subscription.",
+    "ERROR_UPDATE_SUBSCRIPTION": "Couldn't update subscription.",
+    "ERROR_SUBSCRIPTION_PAYMENT_METHOD": "Couldn't subscription payment method.",
+    "ERROR_RETRIEVE_PAYMENT_METHOD": "Couldn't retrieve payment method",
+    "ERROR_GET_CUSTOMERS_INVOICE": "Couldn't get customer's invoice",
+    "ERROR_CREATE_SETUP_INTENT": "Couldn't create setup intent"
+}

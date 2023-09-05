@@ -1,0 +1,75 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "bugtracker.software Backend",
+    "description": "This is a backend for bugtracker.software webapp and mobile app.",
+    "contact": {
+      "email": "rishabbahal@gmail.com"
+    },
+    "version": "0.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000/v0"
+    },
+    {
+      "url": "http://localhost:3001/v0"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Generic",
+      "description": "Generic"
+    }
+  ],
+  "paths": {
+    "/working": {
+      "get": {
+        "tags": [
+          "Generic"
+        ],
+        "summary": "Gets generic items as per the user.",
+        "description": "Gets generic.",
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "data": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/Working"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Working": {
+        "type": "object",
+        "properties": {
+          "working": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "checkUserAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWTString"
+      }
+    }
+  }
+}

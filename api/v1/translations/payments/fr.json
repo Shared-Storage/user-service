@@ -1,0 +1,14 @@
+{
+    "ERROR_UPDATE_BILLING_DETAILS": "Impossible de mettre à jour les détails de facturation.",
+    "ERROR_GET_PLANS": "Je n'ai pas pu avoir de plans.",
+    "ERROR_GET_PRODUCT_FROM_ID": "Impossible d'obtenir le produit à partir de l'identifiant.",
+    "ERROR_CANCEL_SUBS_PERIOD_END": "Impossible d'annuler l'abonnement à la fin de la période.",
+    "CANCEL_SUBSCRIPTION_AT_PERIOD_END_METHOD": "Résilier en fin de période mode d'abonnement valeur supprimée",
+    "ERROR_RESUMING_SUBSCRIPTION": "Erreur lors de la reprise de l'abonnement",
+    "ERROR_CANCEL_SUBS": "Impossible d'annuler l'abonnement.",
+    "ERROR_UPDATE_SUBSCRIPTION": "Impossible de mettre à jour l'abonnement.",
+    "ERROR_SUBSCRIPTION_PAYMENT_METHOD": "Impossible de payer l'abonnement.",
+    "ERROR_RETRIEVE_PAYMENT_METHOD": "Impossible de récupérer le mode de paiement",
+    "ERROR_GET_CUSTOMERS_INVOICE": "Impossible d'obtenir la facture du client",
+    "ERROR_CREATE_SETUP_INTENT": "Impossible de créer une intention de configuration"
+  }

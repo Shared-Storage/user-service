@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Free",
+    "subheader": "",
+    "price": "0",
+    "description": [
+      "1 Organization",
+      "Max 3 projects in total"
+    ],
+    "priceId": ""
+  },
+  {
+    "title": "Basic",
+    "subheader": "",
+    "price": "19.99",
+    "description": [
+      "3 Organizations",
+      "Max 11 projects in total"
+    ],
+    "priceId": ""
+  },
+  {
+    "title": "Premium",
+    "subheader": "",
+    "price": "39.99",
+    "description": [
+      "Unlimited Organizations",
+      "Unlimited projects"
+    ],
+    "priceId": ""
+  }
+]

@@ -1,0 +1,5 @@
+node_modules
+ROUGH
+.env
+.env.dev
+.env.local
