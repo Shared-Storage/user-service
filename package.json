@@ -4,9 +4,9 @@
   "description": "Bhojan prototype 2",
   "main": "app.js",
   "scripts": {
-    "start": "node app",
-    "start-dev-online": "eval $(cat .env.dev) nodemon app",
-    "start-dev-offline": "eval $(cat .env.local) nodemon app",
+    "start": "node server",
+    "start-dev-online": "eval $(cat .env.dev) nodemon server",
+    "start-dev-offline": "eval $(cat .env.local) nodemon server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rishab Bahal",
