@@ -1,0 +1,34 @@
+service: bhojan-be-prototype-2
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: us-east-1
+  timeout: 15
+  memorySize: 2048
+functions:
+  hello:
+    handler: handler.hello
+    events:
+     - http: ANY /{proxy+}
+     - http: ANY /
+# Environment variables
+    environment:
+      ENV: ${env:ENV}
+      PORT: ${env:PORT}
+      ENABLE_DEBUG: ${env:ENABLE_DEBUG}
+      ENABLE_EMAIL: ${env:ENABLE_EMAIL}
+      MONGODB_URL: ${env:MONGODB_URL}
+      SENDGRID_API_KEY: ${env:SENDGRID_API_KEY}
+      TOKEN_SECRET: ${env:TOKEN_SECRET}
+      TOKEN_EXPIRY: ${env:TOKEN_EXPIRY}
+      BACKEND_URL: ${env:BACKEND_URL}
+      FRONTEND_URL: ${env:FRONTEND_URL}
+      CLOUD_SECRET_KEY: ${env:CLOUD_SECRET_KEY}
+      CLOUD_ACCESS_KEY_ID: ${env:CLOUD_ACCESS_KEY_ID}
+      MULTER_S3_BUCKET: ${env:MULTER_S3_BUCKET}
+      STRIPE_PUBLISHABLE_KEY: ${env:STRIPE_PUBLISHABLE_KEY}
+      STRIPE_SECRET: ${env:STRIPE_SECRET}
+

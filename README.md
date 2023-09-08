@@ -91,3 +91,13 @@ CORS policy in bucket
         }
     ]
 }
+
+## Serverless deployment
+https://www.youtube.com/watch?v=1IjTYzOfSMc
+
+```$ npm install -g serverless```
+```$ serverless config credentials --provider aws --key <KEY> --secret <SECRET>```
+```$ serverless create -t aws-nodejs```
+```$ npm install --save serverless-http```
+
+

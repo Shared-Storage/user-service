@@ -3,6 +3,9 @@ const bodyParser = require("body-parser");
 const swaggerUi = require("swagger-ui-express");
 const logger = require("./util/logger");
 
+const mongoose = require("mongoose");
+const mongoDbUrl = process.env.MONGODB_URL;
+
 const app = express();
 
 const v0Routes = require("./api/v0/index");
@@ -46,5 +49,5 @@ app.use((req, res, next) => {
 app.use("/v0", v0Routes.router);
 app.use("/v1", v1Routes.router);
 app.use("/", swaggerUi.serve, swaggerUi.setup(null, options));
-
+mongoose.connect(mongoDbUrl, { useNewUrlParser: true });
 module.exports = app;

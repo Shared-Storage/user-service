@@ -8,8 +8,8 @@ const aws = require("aws-sdk");
 const translate = require("../../../util/translate");
 
 aws.config.update({
-  secretAccessKey: process.env.AWS_SECRET_KEY,
-  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.CLOUD_SECRET_KEY,
+  accessKeyId: process.env.CLOUD_ACCESS_KEY_ID,
 });
 var s3 = new aws.S3();
 

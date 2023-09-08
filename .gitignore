@@ -1,5 +1,14 @@
+# package directories
 node_modules
-ROUGH
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# Environment files
 .env
 .env.dev
 .env.local
+
+# ROUGH directory
+ROUGH
