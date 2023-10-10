@@ -29,7 +29,7 @@ exports.getOrganizations = async (req, res, next) => {
       owner: req.userData.id,
     });
     const sharedOrganizations = await Organization.find({
-      orgMembers: req.userData.email,
+      "orgMembers.email": req.userData.email,
     });
     res.status(200).send({
       success: true,
