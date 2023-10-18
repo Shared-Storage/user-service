@@ -101,3 +101,5 @@ https://www.youtube.com/watch?v=1IjTYzOfSMc
 ```$ npm install --save serverless-http```
 
 
+## Possible status of organization members
+"pending", "accepted" and "declined"

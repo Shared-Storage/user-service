@@ -27,10 +27,11 @@ exports.getOrganizations = async (req, res, next) => {
   try {
     const ownedOrganizations = await Organization.find({
       owner: req.userData.id,
-    });
+    }).populate("owner");
     const sharedOrganizations = await Organization.find({
       "orgMembers.email": req.userData.email,
-    });
+      "orgMembers.status": {$not : {$eq: "declined"}},
+    }).populate("owner");
     res.status(200).send({
       success: true,
       ownedOrganizations: [...ownedOrganizations],
