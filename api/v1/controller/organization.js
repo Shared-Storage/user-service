@@ -43,7 +43,6 @@ exports.getOrganizations = async (req, res, next) => {
 };
 
 exports.acceptInvitation = async (req, res, next) => {
-  logger.log("Accept invitation");
   const userEmail = req.userData.email;
   const organizationId = req.body.organizationId;
 
@@ -77,8 +76,6 @@ exports.acceptInvitation = async (req, res, next) => {
         modifiedCurrentUserObject,
       ];
 
-      logger.log("modifiedOrgMembersArray")
-      logger.log(modifiedOrgMembersArray)
       // Updating organization object
       await Organization.updateOne(
         { _id: organizationId },
@@ -97,8 +94,6 @@ exports.acceptInvitation = async (req, res, next) => {
 };
 
 exports.declineInvitation = async (req, res, next) => {
-  logger.log("Decline invitation");
-  logger.log("Accept invitation");
   const userEmail = req.userData.email;
   const organizationId = req.body.organizationId;
 
@@ -132,8 +127,6 @@ exports.declineInvitation = async (req, res, next) => {
         modifiedCurrentUserObject,
       ];
 
-      logger.log("modifiedOrgMembersArray")
-      logger.log(modifiedOrgMembersArray)
       // Updating organization object
       await Organization.updateOne(
         { _id: organizationId },
