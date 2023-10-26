@@ -13,5 +13,7 @@ const i18n = translate.getI18n(
 router.use(i18n.init);
 router.post("/create-organization", isAuth, controller.createOrganization);
 router.get("/get-organizations", isAuth, controller.getOrganizations);
+router.post("/accept-invitation", isAuth, controller.acceptInvitation);
+router.post("/decline-invitation", isAuth, controller.declineInvitation);
 
 exports.router = router;

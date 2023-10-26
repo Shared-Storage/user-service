@@ -30,13 +30,122 @@ exports.getOrganizations = async (req, res, next) => {
     }).populate("owner");
     const sharedOrganizations = await Organization.find({
       "orgMembers.email": req.userData.email,
-      "orgMembers.status": {$not : {$eq: "declined"}},
+      "orgMembers.status": { $not: { $eq: "declined" } },
     }).populate("owner");
     res.status(200).send({
       success: true,
       ownedOrganizations: [...ownedOrganizations],
       sharedOrganizations: [...sharedOrganizations],
     });
+  } catch (error) {
+    res.status(500).send({ success: false, errorMessage: error.message });
+  }
+};
+
+exports.acceptInvitation = async (req, res, next) => {
+  logger.log("Accept invitation");
+  const userEmail = req.userData.email;
+  const organizationId = req.body.organizationId;
+
+  try {
+    // Find the organization
+    const organization = await Organization.findById(organizationId);
+    // Access organization members
+    const organizationMembers = organization?.orgMembers;
+    // Find the current user's object in organization members
+    let currentUserIndex = undefined;
+    const currentUserObject = organizationMembers.find((member, index) => {
+      currentUserIndex = index;
+      return member.email === userEmail;
+    });
+    // Modify currentUserObject
+    const modifiedCurrentUserObject = {
+      ...currentUserObject,
+      status: "accepted",
+    };
+
+    // Array pop and push then save
+    if (currentUserIndex != undefined) {
+      const orgMembersArrayExceptCurrentMember = organizationMembers.filter(
+        (member) => {
+          return member != currentUserObject;
+        }
+      );
+
+      const modifiedOrgMembersArray = [
+        ...orgMembersArrayExceptCurrentMember,
+        modifiedCurrentUserObject,
+      ];
+
+      logger.log("modifiedOrgMembersArray")
+      logger.log(modifiedOrgMembersArray)
+      // Updating organization object
+      await Organization.updateOne(
+        { _id: organizationId },
+        { orgMembers: modifiedOrgMembersArray }
+      );
+      res.status(200).send({ success: true});
+    } else {
+      res.status(500).send({
+        success: false,
+        errorMessage: "Couldn't find user in organization members",
+      });
+    }
+  } catch (error) {
+    res.status(500).send({ success: false, errorMessage: error.message });
+  }
+};
+
+exports.declineInvitation = async (req, res, next) => {
+  logger.log("Decline invitation");
+  logger.log("Accept invitation");
+  const userEmail = req.userData.email;
+  const organizationId = req.body.organizationId;
+
+  try {
+    // Find the organization
+    const organization = await Organization.findById(organizationId);
+    // Access organization members
+    const organizationMembers = organization?.orgMembers;
+    // Find the current user's object in organization members
+    let currentUserIndex = undefined;
+    const currentUserObject = organizationMembers.find((member, index) => {
+      currentUserIndex = index;
+      return member.email === userEmail;
+    });
+    // Modify currentUserObject
+    const modifiedCurrentUserObject = {
+      ...currentUserObject,
+      status: "declined",
+    };
+
+    // Array pop and push then save
+    if (currentUserIndex != undefined) {
+      const orgMembersArrayExceptCurrentMember = organizationMembers.filter(
+        (member) => {
+          return member != currentUserObject;
+        }
+      );
+
+      const modifiedOrgMembersArray = [
+        ...orgMembersArrayExceptCurrentMember,
+        modifiedCurrentUserObject,
+      ];
+
+      logger.log("modifiedOrgMembersArray")
+      logger.log(modifiedOrgMembersArray)
+      // Updating organization object
+      await Organization.updateOne(
+        { _id: organizationId },
+        { orgMembers: modifiedOrgMembersArray }
+      );
+      res.status(200).send({ success: true});
+    } else {
+      res.status(500).send({
+        success: false,
+        errorMessage: "Couldn't find user in organization members",
+      });
+    }
   } catch (error) {
     res.status(500).send({ success: false, errorMessage: error.message });
   }
