@@ -28,10 +28,10 @@ exports.getOrganizations = async (req, res, next) => {
     const ownedOrganizations = await Organization.find({
       owner: req.userData.id,
     }).populate("owner");
-    const sharedOrganizations = await Organization.find({
+    let sharedOrganizations = await Organization.find({
       "orgMembers.email": req.userData.email,
-      "orgMembers.status": { $not: { $eq: "declined" } },
     }).populate("owner");
+
     res.status(200).send({
       success: true,
       ownedOrganizations: [...ownedOrganizations],
@@ -81,7 +81,7 @@ exports.acceptInvitation = async (req, res, next) => {
         { _id: organizationId },
         { orgMembers: modifiedOrgMembersArray }
       );
-      res.status(200).send({ success: true});
+      res.status(200).send({ success: true });
     } else {
       res.status(500).send({
         success: false,
@@ -132,7 +132,7 @@ exports.declineInvitation = async (req, res, next) => {
         { _id: organizationId },
         { orgMembers: modifiedOrgMembersArray }
       );
-      res.status(200).send({ success: true});
+      res.status(200).send({ success: true });
     } else {
       res.status(500).send({
         success: false,
