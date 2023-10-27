@@ -42,6 +42,16 @@ exports.getOrganizations = async (req, res, next) => {
   }
 };
 
+exports.getOrganization = async (req, res, next) => {
+  const organizationId = req.params.organizationId;
+  try {
+    const organization = await Organization.findById(organizationId);
+    res.status(200).send({ success: true, organization: organization });
+  } catch (error) {
+    res.status(500).send({ success: false, errorMessage: error.message });
+  }
+};
+
 exports.acceptInvitation = async (req, res, next) => {
   const userEmail = req.userData.email;
   const organizationId = req.body.organizationId;
