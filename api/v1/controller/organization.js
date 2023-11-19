@@ -16,8 +16,8 @@ exports.createOrganization = async (req, res, next) => {
       createdBy: req.userData.id,
       owner: req.userData.id,
     });
-    await organization.save();
-    res.status(201).send({ success: true });
+    const response = await organization.save();
+    res.status(201).send({ success: true, organization: response });
   } catch (error) {
     res.status(500).send({ success: false, errorMessage: error.message });
   }
