@@ -1,7 +1,7 @@
 {
-  "name": "bhojan-be-prototype-2",
+  "name": "user-service",
   "version": "1.0.6",
-  "description": "Bhojan prototype 2",
+  "description": "Shared storage project",
   "main": "app.js",
   "scripts": {
     "start": "node server",
