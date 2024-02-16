@@ -1,16 +1,16 @@
-service: bhojan-be-prototype-2
+service: sstorage-user-service
 frameworkVersion: "3"
 
 provider:
   name: aws
   runtime: nodejs18.x
-  stage: dev
+  stage: ${env:ENV}
   region: us-east-1
   timeout: 15
   memorySize: 2048
 functions:
-  hello:
-    handler: handler.hello
+  app:
+    handler: handler.app
     events:
      - http: ANY /{proxy+}
      - http: ANY /

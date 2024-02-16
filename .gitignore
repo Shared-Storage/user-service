@@ -7,8 +7,8 @@ jspm_packages
 
 # Environment files
 .env
-.env.dev
-.env.local
+.env.deploy.*
+.env.local.*
 
 # ROUGH directory
 ROUGH
