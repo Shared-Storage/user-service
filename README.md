@@ -1,22 +1,47 @@
-# Bhojan-backend
-Prototype 2
+# SSTORAGE-USER-SERVICE
 
-This project is based on [ReactJS in frontend](https://github.com/bug-tracker-software/bts-fe-prototype-2), NodeJS in backend and MongoDB as a database. It contains complete authentication, user management system and subscription management.
+This project is based on backend of bugtracker software and is used as a service in SSTORAGE project, NodeJS in backend and MongoDB as a database. It contains complete authentication, user management system and subscription management.
 
 ## Branches
 - complete-authentication branch (v1.0.4) contains authentication & user management system.
 - complete-authentication-subscription branch (v1.0.5) contains authentication, user management system and subscription management.
 
 
-## Environment setup
-Nodejs and Express based api.
-- Node version used **16.16.0**
-- NPM version used **8.11.0**
+## Environment
+- Node version: 18.19.0
+- NPM version: 10.2.3
 
-## Run 
-1. Create **.env** and **.env.dev** based on **.env.example** in the root directory.
-2. Run `npm install` in terminal to install all packages.
-3. Run `npm start`, `npm run start-dev` or `npm run start-local` for environments **.env**, **.env.dev** and **.env.local** respectively.
+## Setting up environment variables
+Take reference from .env.example file.
+- Create .env.local.dev and .env.local.staging for development.
+- Create .env.deploy.production and .env.deploy.staging for serverless deployments.
+
+### In my case databases, env files and scripts have following relations
+- MongoDB atlas production database:
+    - .env.deploy.production (`npm run serverless-deploy-production`)
+- MongoDB atlas staging database:
+    - .env.deploy.staging (`npm run serverless-deploy-staging`)
+    - .env.local.staging (`npm start`)
+- MongoDB local server:
+    - .env.local.dev (`npm run dev`)
+
+## To run the app
+Run `$ npm run dev` to run the app in development for local mongodb server.
+Run `$ npm start` to run the app in development for staging mongodb server in mongodb atlas.
+
+## To deploy the app (Deployed on AWS Lambda)
+Make sure **serverless** is installed `npm i -g serverless` and configured `serverless config credentials --provider aws --key <Key> --secret <Secret>`
+
+To generate keys you can refer here https://www.youtube.com/watch?v=D5_FHbdsjRc
+
+### For staging deployment
+`npm run serverless-deploy-staging`
+
+### For staging production
+`npm run serverless-deploy-production`
+
+## To test if app is up in development or deployment
+In browser run the following: `http://<server_link>/v0/working`
 
 ## Docker
 1. For M1/M2 based computer:

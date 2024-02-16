@@ -4,10 +4,10 @@
   "description": "Shared storage project",
   "main": "app.js",
   "scripts": {
-    "start": "node server",
-    "start-dev-online": "eval $(cat .env.dev) nodemon server",
-    "start-dev-offline": "eval $(cat .env.local) nodemon server",
-    "deploy": "eval $(cat .env) serverless deploy",
+    "start": "eval $(cat .env.local.staging) node server",
+    "dev": "eval $(cat .env.local.dev) nodemon server",
+    "serverless-deploy-production": "eval $(cat .env.deploy.production) serverless deploy",
+    "serverless-deploy-staging": "eval $(cat .env.deploy.staging) serverless deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rishab Bahal",
