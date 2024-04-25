@@ -53,6 +53,24 @@ In browser run the following: `http://<server_link>/v0/working`
 3. To stop container
 `$ docker stop app-container`
 
+### .env.docker
+```
+ENV=local.docker
+PORT=3001
+ENABLE_DEBUG=true
+ENABLE_EMAIL=false
+MONGODB_URL=mongodb://db:27017/sharedstorage
+SENDGRID_API_KEY=#####
+TOKEN_SECRET=ThisIsSecret
+TOKEN_EXPIRY=1h
+BACKEND_URL=http://localhost:3001
+FRONTEND_URL=http://localhost:3000
+CLOUD_SECRET_KEY=#####
+CLOUD_ACCESS_KEY_ID=#####
+MULTER_S3_BUCKET=sharedstorage-storage
+STRIPE_PUBLISHABLE_KEY=#####
+STRIPE_SECRET=#####
+```
 
 ## Multer image upload tutorial
 https://www.youtube.com/watch?v=NZElg91l_ms

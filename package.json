@@ -8,6 +8,7 @@
     "dev": "eval $(cat .env.local.dev) nodemon server",
     "serverless-deploy-production": "eval $(cat .env.deploy.production) serverless deploy",
     "serverless-deploy-staging": "eval $(cat .env.deploy.staging) serverless deploy",
+    "start-docker": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Rishab Bahal",

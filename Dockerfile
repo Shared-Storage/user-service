@@ -1,7 +1,7 @@
-FROM node:16
+FROM node:18.19
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY . .
-EXPOSE 8080
-CMD ["npm", "start"]
+EXPOSE 3001
+CMD ["npm", "run", "start-docker"]
